@@ -167,7 +167,7 @@ const HomeArrowDown: any = styled('img')({
   marginTop:'5px',
   marginLeft: '5px',
   width: `9.24px`,
-  objectFit: `cover`,
+  objectFit: `contain`,
   left: `89px`,
   top: `8px`,
   transform: `rotate(90deg)`,
