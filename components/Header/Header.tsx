@@ -76,7 +76,7 @@ function Header(props: HeaderProps): JSX.Element {
                 link: 'https://www.primevacinas.com.br/blog',
                 isDown: false
               },
-            ].map(e => <HomeNavOption>
+            ].map(e => <HomeNavOption key={e.text}>
               <HomeNavButton>{[e.text]}</HomeNavButton>
               {
                 e.isDown &&

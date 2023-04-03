@@ -1827,8 +1827,8 @@ function Inicio(props: InicioProps): JSX.Element {
         }}>
           <HomeContainerExames>
             {
-              ['', '', ''].map((item, index) => (
-                <DefaultViewportAnimation>
+              ['a', 'b', 'c'].map((item, index) => (
+                <DefaultViewportAnimation key={item}>
                   <HomeContainerExamesTile>
                     <BloodSample1
                       src={`assets/images/Inicio_blood_sample_1.png`}
