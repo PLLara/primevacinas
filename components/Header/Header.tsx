@@ -164,7 +164,6 @@ const HomeNavOption: any = styled('button')({
 });
 
 const HomeArrowDown: any = styled('img')({
-  marginTop:'5px',
   marginLeft: '5px',
   width: `9.24px`,
   objectFit: `contain`,
