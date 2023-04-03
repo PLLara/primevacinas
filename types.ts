@@ -13,6 +13,10 @@
  *
  **********************************************************************/
 
+export interface InicioProps {
+  className?: any;
+}
+
 export interface HeaderProps {
   className?: any;
 }
