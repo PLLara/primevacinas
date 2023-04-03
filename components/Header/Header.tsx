@@ -168,7 +168,6 @@ const HomeArrowDown: any = styled('img')({
   width: `9.24px`,
   objectFit: `contain`,
   left: `89px`,
-  top: `8px`,
   transform: `rotate(90deg)`,
 });
 
