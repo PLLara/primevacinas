@@ -11,3 +11,29 @@ body {
   font-family: 'Raleway' 'Roboto' 'Inter' 'Montserrat' -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+.rs-carousel{
+  background-color: transparent !important;
+}
+.rs-carousel-content{
+  background-color: transparent !important;
+}
+.rs-carousel-slider-item{
+  background-color: transparent !important;
+}
+
+.rs-carousel-label-wrapper {
+  margin: 10px !important;
+  width: 2rem !important;
+  background-color: grey !important;
+  border-radius: 8px;
+}
+.rs-carousel-label {
+  width: 2rem !important;
+  background-color: grey !important;
+  border-radius: 8px !important;
+}
+.rs-carousel-label-wrapper input:checked~label{
+  background-color: red !important;
+  width: 2rem !important;
+  border-radius: 8px !important;
+}
