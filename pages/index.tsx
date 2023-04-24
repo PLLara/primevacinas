@@ -10,8 +10,8 @@ const Home: NextPage = () => {
       <ThemeProvider theme={questTheme}>
         <div>
           <Head>
-            <title>Inicio</title>
-            <link rel="icon" href="/favicon.ico" />
+            <title>Prime Vacinas | Atendimento Domiciliar | Vacinação em Empresa</title>
+            <link rel="icon" href="/favicon.png" />
           </Head>
           <main>
             <InicioComp />
