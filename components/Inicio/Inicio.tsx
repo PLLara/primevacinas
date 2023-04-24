@@ -683,10 +683,12 @@ function InicioJumbotronPrimeOndeEstiver() {
           </HomeOndeVoceEstiverTextSpan>
           <HomeOndeVoceEstiverSublinhado />
 
-          <HomeOndeVoceEstiverLorem className="mt-10">
-            {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis.
+          <HomeOndeVoceEstiverLorem className="mt-10 mr-10">
+            <div>
+              {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis.
 \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis.
 \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis.`}
+            </div>
           </HomeOndeVoceEstiverLorem>
 
           <div className={"flex align-bottom justify-center md:justify-start"}>
@@ -840,11 +842,11 @@ function InicioJumbotronVacinacaoCondominio() {
             }}
             className={"pb-12 md:pb-0"}
           >
-            <motion.div whileHover={
-              {
+            <motion.div
+              whileHover={{
                 scale: 1.03,
-              }
-            }>
+              }}
+            >
               <Image
                 src="/assets/images/vacinacao1.png"
                 alt="vacinacao"
@@ -857,11 +859,11 @@ function InicioJumbotronVacinacaoCondominio() {
                 width: "3rem",
               }}
             />
-            <motion.div whileHover={
-              {
+            <motion.div
+              whileHover={{
                 scale: 1.03,
-              }
-            }>
+              }}
+            >
               <Image
                 src="/assets/images/vacinacao2.png"
                 alt="vacinacao"
@@ -965,7 +967,6 @@ const HomeContainerExamesTile: any = styled("div")({
   margin: `0px`,
 });
 
-
 const Exames: any = styled("div")({
   textAlign: `center`,
   whiteSpace: `pre-wrap`,
@@ -1003,9 +1004,6 @@ const HomeContainerExamesIcon: any = styled("img")({
   top: `0px`,
 });
 
-
-
-
 const HomeOndeVoceEstiver: any = styled("div")({
   margin: `71px 0px`,
   position: `relative`,
@@ -1013,8 +1011,6 @@ const HomeOndeVoceEstiver: any = styled("div")({
   display: `flex`,
   justifyContent: `space-between`,
 });
-
-
 
 const HomeOndeVoceEstiverMain: any = styled("div")({
   display: `flex`,
@@ -1047,8 +1043,6 @@ const APrimeVaiOndeVocêEstSpan2: any = styled("span")({
   textTransform: `none`,
 });
 
-
-
 const HomeOndeVoceEstiverLorem: any = styled("div")({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
@@ -1060,10 +1054,7 @@ const HomeOndeVoceEstiverLorem: any = styled("div")({
   fontSize: `20px`,
   letterSpacing: `0px`,
   textDecoration: `none`,
-  lineHeight: `137.4000072479248%`,
   textTransform: `none`,
-  width: `406px`,
-  height: `267px`,
   left: `9px`,
   top: `175px`,
 });
