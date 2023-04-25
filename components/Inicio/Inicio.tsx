@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import DefaultHeader from "components/Header/Header";
 import { InicioProps } from "types";
@@ -10,6 +11,7 @@ import SvgRectangles from "../../public/assets/images/retangulos.svg";
 import Chevron from "../../public/assets/images/chevron.svg";
 import Image from "next/image";
 import { Carousel } from "rsuite";
+import TinyCrossfade from "react-tiny-crossfade";
 
 function Inicio(props: InicioProps): JSX.Element {
   return (
@@ -45,6 +47,7 @@ function Inicio(props: InicioProps): JSX.Element {
 
 function InicioJumbotronVacinaTomadaAnualmente() {
   return (
+    <DefaultViewportAnimation>
     <div
       style={{
         width: "min(100vw, 1366px)",
@@ -100,11 +103,14 @@ function InicioJumbotronVacinaTomadaAnualmente() {
         <DefaultButton className="w-72">Solicitar proposta</DefaultButton>
       </CColumn>
     </div>
+    </DefaultViewportAnimation>
   );
 }
 
 function InicioJumbotronUtilizePlanoSaude() {
   return (
+    <DefaultViewportAnimation>
+
     <div className={"w-max flex flex-col align-middle justify-center"}>
       <div
         style={{
@@ -150,6 +156,7 @@ function InicioJumbotronUtilizePlanoSaude() {
         </div>
       </div>
     </div>
+    </DefaultViewportAnimation>
   );
 }
 
@@ -257,7 +264,10 @@ function InicioJumbotronPedirAgoraVacinaCarousel() {
 }
 
 function InicioJumbotronSaibaComo() {
+  var [active, setActive] = useState(true);
   return (
+    <DefaultViewportAnimation>
+
     <div
       style={{
         width: "100vw",
@@ -276,52 +286,109 @@ function InicioJumbotronSaibaComo() {
             flex: 2,
           }}
         >
-          <span
-            style={{
-              fontFamily: "Raleway",
-              fontStyle: "normal",
-              fontWeight: 600,
-              fontSize: "38px",
-              lineHeight: "48px",
-              display: "flex",
-              alignItems: "center",
-              color: "#390B0B",
-            }}
-          >
-            Saiba como a nossa <br />
-            vacina chega até a <br />
-            sua casa
-          </span>
-          <br />
-          <br />
-          <span
-            style={{
-              fontFamily: "Inter",
-              fontStyle: "normal",
-              fontWeight: 400,
-              fontSize: "16px",
-              lineHeight: "25px",
-              display: "flex",
-              alignItems: "center",
-              color: "#383A48",
-            }}
-          >
-            Trabalhamos com as principais fabricantes multinacionais de agentes
-            imunizantes: GSK, MSD, Pfizer e Sanofi. As vacinas chegam até a
-            Prime por meio de distribuidores nacionais, certificados habilitados
-            para a função.
-            <br />
-            <br />
-            Uma vez na Prime, ficam armazenadas em câmaras frias fixas da
-            Indrel®️ - uma das mais conceituadas do mercado e específicas para
-            armazenamento de vacinas.
-            <br />
-            <br />
-            Com gerador próprio, que possui 48 horas de duração, elas garantem a
-            qualidade das vacinas mesmo que haja queda de energia.
-            <br />
-            <br />
-          </span>
+          <TinyCrossfade>
+            {active ? (
+              <div key="dsds">
+                <span
+                  style={{
+                    fontFamily: "Raleway",
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    fontSize: "38px",
+                    lineHeight: "48px",
+                    display: "flex",
+                    alignItems: "center",
+                    color: "#390B0B",
+                  }}
+                >
+                  Saiba como a nossa <br />
+                  vacina chega até a <br />
+                  sua casa
+                </span>
+                <br />
+                <br />
+                <span
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    fontSize: "16px",
+                    lineHeight: "25px",
+                    display: "flex",
+                    alignItems: "center",
+                    color: "#383A48",
+                  }}
+                >
+                  Trabalhamos com as principais fabricantes multinacionais de
+                  agentes imunizantes: GSK, MSD, Pfizer e Sanofi. As vacinas
+                  chegam até a Prime por meio de distribuidores nacionais,
+                  certificados habilitados para a função.
+                  <br />
+                  <br />
+                  Uma vez na Prime, ficam armazenadas em câmaras frias fixas da
+                  Indrel®️ - uma das mais conceituadas do mercado e específicas
+                  para armazenamento de vacinas.
+                  <br />
+                  <br />
+                  Com gerador próprio, que possui 48 horas de duração, elas
+                  garantem a qualidade das vacinas mesmo que haja queda de
+                  energia.
+                  <br />
+                  <br />
+                </span>
+              </div>
+            ) : (
+              <div key="dsdsdsd">
+                <span
+                  style={{
+                    fontFamily: "Raleway",
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    fontSize: "38px",
+                    lineHeight: "48px",
+                    display: "flex",
+                    alignItems: "center",
+                    color: "#390B0B",
+                  }}
+                >
+                  Saiba como a nossa <br />
+                  vacina chega até a <br />
+                  sua casa
+                </span>
+                <br />
+                <br />
+                <span
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    fontSize: "16px",
+                    lineHeight: "25px",
+                    display: "flex",
+                    alignItems: "center",
+                    color: "#383A48",
+                  }}
+                >
+                  Trabalhamos com as principais fabricantes multinacionais de
+                  agentes imunizantes: GSK, MSD, Pfizer e Sanofi. As vacinas
+                  chegam até a Prime por meio de distribuidores nacionais,
+                  certificados habilitados para a função.
+                  <br />
+                  <br />
+                  Uma vez na Prime, ficam armazenadas em câmaras frias fixas da
+                  Indrel®️ - uma das mais conceituadas do mercado e específicas
+                  para armazenamento de vacinas.
+                  <br />
+                  <br />
+                  Com gerador próprio, que possui 48 horas de duração, elas
+                  garantem a qualidade das vacinas mesmo que haja queda de
+                  energia.
+                  <br />
+                  <br />
+                </span>
+              </div>
+            )}
+          </TinyCrossfade>
 
           <div>
             <Row
@@ -336,6 +403,9 @@ function InicioJumbotronSaibaComo() {
                 style={{
                   borderRadius: "999px 0 0 999px",
                 }}
+                onClick={() => {
+                  setActive(!active);
+                }}
               >
                 <button className={"px-5 py-3"} style={{}}>
                   <Chevron />
@@ -343,6 +413,9 @@ function InicioJumbotronSaibaComo() {
               </DefaultButtonInk>
 
               <DefaultButtonInk
+                onClick={() => {
+                  setActive(!active);
+                }}
                 className={"text p-3"}
                 style={{
                   borderRadius: "0 999px 999px 0",
@@ -366,15 +439,24 @@ function InicioJumbotronSaibaComo() {
             flex: 3,
           }}
         >
-          <img src="assets/images/geladeira.png"></img>
+          <TinyCrossfade className="component-wrapper">
+            {active ? (
+              <img src="assets/images/geladeira.png" key={"asd"}></img>
+            ) : (
+              <img src="assets/images/potevacina.png" key="dsa" width={200}></img>
+            )}
+          </TinyCrossfade>
         </div>
       </div>
     </div>
+    </DefaultViewportAnimation>
   );
 }
 
 function InicioJumbotronBlog() {
   return (
+    <DefaultViewportAnimation>
+
     <div
       className={"flex flex-col items-center justify-center"}
       style={{
@@ -484,6 +566,7 @@ function InicioJumbotronBlog() {
         </CRow>
       </div>
     </div>
+    </DefaultViewportAnimation>
   );
 }
 
@@ -683,12 +766,10 @@ function InicioJumbotronPrimeOndeEstiver() {
           </HomeOndeVoceEstiverTextSpan>
           <HomeOndeVoceEstiverSublinhado />
 
-          <HomeOndeVoceEstiverLorem className="mt-10 mr-10">
-            <div>
-              {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis.
+          <HomeOndeVoceEstiverLorem className="mt-10">
+            {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis.
 \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis.
 \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac velit turpis.`}
-            </div>
           </HomeOndeVoceEstiverLorem>
 
           <div className={"flex align-bottom justify-center md:justify-start"}>
@@ -748,6 +829,7 @@ export function DefaultButton(props) {
           color: "#FFFFFF",
           width: "100%",
           padding: "1rem 2rem",
+          ...props.style,
         }}
       >
         {props.children}
@@ -845,6 +927,11 @@ function InicioJumbotronVacinacaoCondominio() {
             <motion.div
               whileHover={{
                 scale: 1.03,
+                boxShadow: "0px 0px 9px rgba(255, 89, 85, 0.5)",
+              }}
+              style={{
+                borderRadius: "30px",
+                overflow: "hidden",
               }}
             >
               <Image
@@ -862,6 +949,11 @@ function InicioJumbotronVacinacaoCondominio() {
             <motion.div
               whileHover={{
                 scale: 1.03,
+                boxShadow: "0px 0px 9px rgba(255, 89, 85, 0.5)",
+              }}
+              style={{
+                borderRadius: "30px",
+                overflow: "hidden",
               }}
             >
               <Image
@@ -1054,7 +1146,10 @@ const HomeOndeVoceEstiverLorem: any = styled("div")({
   fontSize: `20px`,
   letterSpacing: `0px`,
   textDecoration: `none`,
+  lineHeight: `137.4000072479248%`,
   textTransform: `none`,
+  width: `406px`,
+  height: `267px`,
   left: `9px`,
   top: `175px`,
 });

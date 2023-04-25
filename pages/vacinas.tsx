@@ -6,6 +6,7 @@ import { DefaultColors } from "components/global/global";
 import Link from "next/link";
 import { HeaderProps, IconButton, Dropdown, Row } from "rsuite";
 import VacinasPrincipalImagem from "../public/assets/images/vacinasprincipal.svg";
+import { DefaultViewportAnimation } from "components/Inicio/DefaultViewportAnimation";
 
 export default function Vacinas() {
   return (
@@ -15,6 +16,7 @@ export default function Vacinas() {
         <VacinasPrincipal />
         <VacinasVacinas />
       </div>
+      <DefaultButton>enviar</DefaultButton>
     </div>
   );
 }
@@ -24,7 +26,7 @@ function VacinasVacinas() {
     <div
       style={{
         width: "100vw",
-        paddingTop: "5rem",
+        paddingTop: "10rem",
       }}
       className={"flex w-max flex-Column justify-center items-center"}
     >
@@ -38,6 +40,7 @@ function VacinasVacinas() {
           style={{
             width: "400px",
           }}
+          className="hidden md:flex"
         >
           <div
             className={"mr-16 py-7"}
@@ -83,7 +86,12 @@ function VacinasVacinas() {
                 "Em Tratamento Com Imunossupressores",
               ].map((item) => {
                 return (
-                  <>
+                  <div
+                    key={item}
+                    style={{
+                      cursor: "pointer",
+                    }}
+                  >
                     <DefaultButtonInk key="item" className={""}>
                       <li
                         className={
@@ -99,18 +107,28 @@ function VacinasVacinas() {
                             height: "16px",
                           }}
                         />
-                        &nbsp;&nbsp; &nbsp;
-                        <img
-                          src={"assets/images/" + item + ".png"}
-                          alt=""
-                          width={20}
-                        />
-                        &nbsp;&nbsp;
-                        <label htmlFor={"a" + item}>&nbsp;&nbsp;{item}</label>
+                        <label
+                          htmlFor={"a" + item}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                          }}
+                        >
+                          <img
+                            src={"assets/images/" + item + ".png"}
+                            alt=""
+                            width={20}
+                            style={{
+                              marginLeft: "12px",
+                              marginRight: "8px",
+                            }}
+                          />
+                          {item}
+                        </label>
                       </li>
                     </DefaultButtonInk>
                     <br />
-                  </>
+                  </div>
                 );
               })}
             </ul>
@@ -230,13 +248,109 @@ function VacinasVacinas() {
             </ul>
           </div>
         </div>
+
         <div
           style={{
             flex: 1,
           }}
+          className=""
         >
-          vacinas
-        </div>{" "}
+          <div
+            style={{
+              display: "grid",
+              gap: "5rem",
+            }}
+            className="grid-cols-1 md:grid-cols-2 content-center"
+          >
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((item) => {
+              return (
+                <DefaultViewportAnimation key={item}>
+                  <div
+                    key={item}
+                    style={{
+                      maxWidth: "380px",
+                      margin: "0 auto",
+                    }}
+                  >
+                    <div
+                      style={{
+                        background: "#FFF5F5",
+                        display: "flex",
+                      }}
+                      className={"p-5 rounded-xl"}
+                    >
+                      <img
+                        src="assets/images/potevacina.png"
+                        alt=""
+                        width={50}
+                        style={{
+                          transform: "scale(1.4)",
+                          transformOrigin: "bottom center",
+                        }}
+                      />
+                      <div
+                        className={"pl-10"}
+                        style={{
+                          fontFamily: "Roboto",
+                          fontStyle: "normal",
+                          fontWeight: "600",
+                          fontSize: "14px",
+                          color: "#3B3B3B",
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <div>Vacina Quadrivalente da Gripe (Cepas 2023)</div>
+                        <div>
+                          <span>
+                            <span
+                              style={{
+                                fontFamily: "Roboto",
+                                fontStyle: "normal",
+                                fontWeight: 700,
+                                fontSize: "12px",
+                                lineHeight: "24px",
+                                color: "#FF5955",
+                              }}
+                            >
+                              R$: &nbsp;&nbsp;
+                            </span>
+                            <span
+                              style={{
+                                fontFamily: "Roboto",
+                                fontSize: 16,
+                                color: "#212B36",
+                              }}
+                            >
+                              120,00
+                            </span>
+                          </span>
+                          <br />
+                          <div
+                            style={{
+                              display: "flex",
+                              width: "100%",
+                            }}
+                          >
+                            <DefaultButton
+                              style={{
+                                padding: "0.5rem 1rem",
+                                width: "200px",
+                              }}
+                            >
+                              Saiba mais
+                            </DefaultButton>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </DefaultViewportAnimation>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -244,64 +358,57 @@ function VacinasVacinas() {
 
 function VacinasPrincipal() {
   return (
-    <div
-      style={{
-        backgroundColor: "#190808",
-        height: "80vh",
-        paddingTop: "20vh",
-        width: "100vw",
-      }}
-      className={"flex w-max flex-Column justify-center items-center"}
-    >
+    <DefaultViewportAnimation>
       <div
-        className={"flex flex-row"}
         style={{
-          width: "min(100vw, 1440px)",
+          backgroundColor: "#190808",
+          paddingTop: "25vh",
+          paddingBottom: "50px",
+          width: "100vw",
         }}
+        className={"flex w-max flex-Column justify-center items-center"}
       >
-        <div>
-          <div
-            style={{
-              fontFamily: "Raleway",
-              fontStyle: "normal",
-              fontWeight: 300,
-              fontSize: "3rem",
-              color: "white",
-              maxWidth: "80%",
-            }}
-          >
-            Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit.</b>{" "}
-            Etiam ac velit turpis.
-          </div>
+        <div
+          className={"flex flex-row"}
+          style={{
+            width: "min(100vw, 1440px)",
+          }}
+        >
+          <div>
+            <div
+              style={{
+                fontFamily: "Raleway",
+                fontStyle: "normal",
+                fontWeight: 300,
+                fontSize: "3rem",
+                color: "white",
+                maxWidth: "80%",
+              }}
+            >
+              Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit.</b>{" "}
+              Etiam ac velit turpis.
+            </div>
 
-          <div
-            style={{
-              fontFamily: "Raleway",
-              fontStyle: "normal",
-              fontWeight: "400",
-              fontSize: "20px",
-              lineHeight: "137.4%",
-              color: "rgba(255, 255, 255, 0.7)",
-              maxWidth: "50%",
-              paddingTop: "3rem",
-            }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac
-            velit turpis. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Etiam ac velit turpis.
+            <div
+              style={{
+                fontFamily: "Raleway",
+                fontStyle: "normal",
+                fontWeight: "400",
+                fontSize: "20px",
+                lineHeight: "137.4%",
+                color: "rgba(255, 255, 255, 0.7)",
+                maxWidth: "50%",
+                paddingTop: "3rem",
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac
+              velit turpis. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Etiam ac velit turpis.
+            </div>
           </div>
-        </div>
-
-        <div>
-          <VacinasPrincipalImagem
-            style={{
-              transform: "translate(0, -10%) scale(1.2)",
-              transformOrigin: "50% 0%",
-            }}
-          />
         </div>
       </div>
-    </div>
+    </DefaultViewportAnimation>
   );
 }
 
@@ -332,6 +439,9 @@ function DefaultHeader(props: HeaderProps): JSX.Element {
                   src={`assets/images/logo/text.png`}
                   loading="lazy"
                   alt={"logo"}
+                  style={{
+                    width: "100%",
+                  }}
                 />
               </Link>
             </DefaultButtonInk>
@@ -343,33 +453,44 @@ function DefaultHeader(props: HeaderProps): JSX.Element {
                 flexDirection: "row",
                 justifyContent: "center",
                 alignItems: "center",
+                border: "1px solid #971916",
+                borderRadius: "10px",
+                overflow: "hidden",
                 width: "80%",
+                paddingLeft: "1rem",
               }}
             >
               <input
+                placeholder="Buscar Vacinas..."
                 type="text"
                 style={{
                   width: "100%",
-                  border: "1px solid black",
+                  height: "100%",
+                  padding: "1rem",
+                  outline: "none",
                 }}
               />
-              <DefaultButton>enviar</DefaultButton>
-            </form>
-          </div>
+              <div
+                style={{
+                  height: "60%",
+                  width: "2px",
+                  backgroundColor: "#971916",
+                  borderRadius: "10px",
+                }}
+              />
 
-          <div
-            style={{
-              flex: 1,
-              flexDirection: `row`,
-              justifyContent: `flex-end`,
-            }}
-            className={"flex md:hidden m-6"}
-          >
-            <DefaultButtonInk>
-              <div className={"p-3"}>
-                <img src="assets/images/menu.png" alt="" />
-              </div>
-            </DefaultButtonInk>
+              <DefaultButtonInk>
+                <img
+                  src="assets/images/lupa.png"
+                  alt=""
+                  style={{
+                    height: "2rem",
+                    margin: "0.5rem",
+                    paddingRight: "1rem",
+                  }}
+                />
+              </DefaultButtonInk>
+            </form>
           </div>
         </div>
         <div
@@ -551,13 +672,7 @@ const Header1: any = styled("div")({
   justifyContent: `center`,
 });
 
-const HeaderLogo: any = styled("img")({
-  height: `48px`,
-  width: `165px`,
-  objectFit: `cover`,
-  left: `65px`,
-  top: `32px`,
-});
+const HeaderLogo: any = styled("img")({});
 
 const Opções: any = styled("div")({
   display: `flex`,

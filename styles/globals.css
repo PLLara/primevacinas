@@ -11,14 +11,21 @@ body {
   font-family: 'Raleway' 'Roboto' 'Inter' 'Montserrat' -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-.rs-carousel{
+
+.rs-carousel {
   background-color: transparent !important;
 }
-.rs-carousel-content{
+
+.rs-carousel-content {
   background-color: transparent !important;
 }
-.rs-carousel-slider-item{
+
+.rs-carousel-slider-item {
   background-color: transparent !important;
+}
+
+li {
+  cursor: pointer !important;
 }
 
 .rs-carousel-label-wrapper {
@@ -27,13 +34,42 @@ body {
   background-color: grey !important;
   border-radius: 8px;
 }
+
 .rs-carousel-label {
   width: 2rem !important;
   background-color: grey !important;
   border-radius: 8px !important;
 }
-.rs-carousel-label-wrapper input:checked~label{
+
+.rs-carousel-label-wrapper input:checked~label {
   background-color: red !important;
   width: 2rem !important;
   border-radius: 8px !important;
+}
+
+.component-wrapper {
+  transition: height 0.5s;
+  overflow: hidden;
+}
+
+.before-enter {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.entering {
+  opacity: 1;
+  transition-duration:  0.5s;
+  transform: translateX(0);
+}
+
+.before-leave {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.leaving {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition-duration:  0.5s;
 }

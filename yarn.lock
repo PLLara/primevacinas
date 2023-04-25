@@ -3830,6 +3830,18 @@ react-spring@^9.5.5:
     "@react-spring/web" "~9.7.1"
     "@react-spring/zdog" "~9.7.1"
 
+react-tiny-crossfade@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-tiny-crossfade/-/react-tiny-crossfade-2.2.0.tgz#d4000ea1e8a9ea7ab5e45d4d98d8b9b7886a1fab"
+  integrity sha512-VzBaPJB1KnVJZdtdJvvcFN2RHEukVhbYIG9hWx6HRKFJhAWpu563eGlgxXytR3QyucJCfTQXGLX8c3ZD7E4OtQ==
+  dependencies:
+    react-tiny-transition "^2.1.8"
+
+react-tiny-transition@^2.1.8:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/react-tiny-transition/-/react-tiny-transition-2.5.0.tgz#0300ef9f67b47c1096fa49a64607f97f1d0e2a9d"
+  integrity sha512-d/UlY9PhgyLzbbmsjpNpSUzUEc2uDyjmJMJe18Rx2S57GlUxJaCZ5zBveswPg+FWR0YaP+bE5B/wl8av1rvHvw==
+
 react-transition-group@^4.4.5:
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.5.tgz#e53d4e3f3344da8521489fbef8f2581d42becdd1"
