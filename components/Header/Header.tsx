@@ -6,6 +6,7 @@ import { Dropdown, IconButton } from "rsuite";
 import "rsuite/dist/rsuite.min.css";
 import { DefaultColors } from "components/global/global";
 import { DefaultButtonInk } from "./DefaultButtonInk";
+import { Link } from "framer";
 
 function DefaultHeader(props: HeaderProps): JSX.Element {
   return (
@@ -40,9 +41,8 @@ function DefaultHeader(props: HeaderProps): JSX.Element {
           className={"flex md:hidden m-6"}
         >
           <DefaultButtonInk>
-            <div className={'p-3'}>
-
-            <img src="assets/images/menu.png" alt=""/>
+            <div className={"p-3"}>
+              <img src="assets/images/menu.png" alt="" />
             </div>
           </DefaultButtonInk>
         </div>
@@ -58,16 +58,19 @@ function DefaultHeader(props: HeaderProps): JSX.Element {
               "item de menu 4",
             ]}
           />
-          <CustomDropdown
-            title="Exames"
-            trigger={["click"]}
-            items={[
-              "item de menu 1",
-              "item de menu 2",
-              "item de menu 3",
-              "item de menu 4",
-            ]}
-          />
+          <Link href={"/vacinas"}>
+            <CustomDropdown
+              title="Exames"
+              trigger={["click"]}
+              items={[
+                "item de menu 1",
+                "item de menu 2",
+                "item de menu 3",
+                "item de menu 4",
+              ]}
+            />
+          </Link>
+
           {[
             {
               text: "Calendário \nde vacinas",
@@ -104,9 +107,6 @@ const renderIconButton = (props, ref, a) => {
     <IconButton
       {...props}
       ref={ref}
-      onClick={() => {
-        window.location.href = "/vacinas";
-      }}
       icon={
         <div
           style={{
@@ -189,20 +189,22 @@ function HeaderSpacing() {
 
 function HomeNavButton(props) {
   return (
-    <IconButton
-      style={{
-        textAlign: `center`,
-        whiteSpace: `pre-wrap`,
-        color: `rgba(151, 25, 22, 1)`,
-        fontFamily: `Montserrat`,
-        fontWeight: `500`,
-        fontSize: `15px`,
-        backgroundColor: "transparent",
-        padding: 8,
-      }}
-    >
-      {props.children}
-    </IconButton>
+    <Link href={"/estatica"}>
+      <IconButton
+        style={{
+          textAlign: `center`,
+          whiteSpace: `pre-wrap`,
+          color: `rgba(151, 25, 22, 1)`,
+          fontFamily: `Montserrat`,
+          fontWeight: `500`,
+          fontSize: `15px`,
+          backgroundColor: "transparent",
+          padding: 8,
+        }}
+      >
+        {props.children}
+      </IconButton>
+    </Link>
   );
 }
 

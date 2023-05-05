@@ -1,7 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import styled from "@emotion/styled";
 import { DefaultButtonInk } from "components/Header/DefaultButtonInk";
-import { DefaultButton } from "components/Inicio/Inicio";
+import {
+  DefaultButton,
+  InicioJumbotronPedirAgoraVacina,
+  Rectangle35,
+} from "components/Inicio/Inicio";
 import { DefaultColors } from "components/global/global";
 import Link from "next/link";
 import { HeaderProps, IconButton, Dropdown, Row } from "rsuite";
@@ -16,7 +20,30 @@ export default function Vacinas() {
         <VacinasPrincipal />
         <VacinasVacinas />
       </div>
+
+      <div
+        style={{
+          // flex cneter
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "10rem",
+        }}
+      >
+        <InicioJumbotronPedirAgoraVacina />
+      </div>
+
       <DefaultButton>enviar</DefaultButton>
+
+      <Rectangle35
+        src={`assets/images/Inicio_Rectangle_35.png`}
+        loading="lazy"
+        alt={"Rectangle 35"}
+        style={{
+          width: "100%",
+        }}
+      />
     </div>
   );
 }
@@ -47,6 +74,7 @@ function VacinasVacinas() {
             style={{
               border: "1px solid #ECECEC",
               borderRadius: "10px",
+              width: "100%",
             }}
           >
             {/*  */}
@@ -72,7 +100,13 @@ function VacinasVacinas() {
                 height: "3px",
               }}
             />
-            <ul className={"pl-5 pt-5"}>
+            <ul
+              className={"pl-5 pt-5"}
+              style={{
+                listStyle: "none",
+                width: "100%",
+              }}
+            >
               {[
                 "Crianças",
                 "Adolescentes",
@@ -90,13 +124,32 @@ function VacinasVacinas() {
                     key={item}
                     style={{
                       cursor: "pointer",
+                      marginBottom: "5px",
+                      width: "100%",
                     }}
                   >
-                    <DefaultButtonInk key="item" className={""}>
-                      <li
-                        className={
-                          "flex flex-row items-center justify-start py-2"
-                        }
+                    <li
+                      className={
+                        "flex flex-row items-center justify-start py-2"
+                      }
+                      style={{
+                        cursor: "pointer",
+                        width: "300px",
+                      }}
+                    >
+                      <DefaultButtonInk
+                        onClick={() => {
+                          console.log("click");
+                        }}
+                        key="item"
+                        className={""}
+                        style={{
+                          width: "300px",
+                          paddingBottom: "15px",
+                          paddingTop: "15px",
+                          alignItems: "start",
+                          justifyContent: "flex-start",
+                        }}
                       >
                         <input
                           type="radio"
@@ -112,6 +165,7 @@ function VacinasVacinas() {
                           style={{
                             display: "flex",
                             alignItems: "center",
+                            cursor: "pointer",
                           }}
                         >
                           <img
@@ -125,9 +179,8 @@ function VacinasVacinas() {
                           />
                           {item}
                         </label>
-                      </li>
-                    </DefaultButtonInk>
-                    <br />
+                      </DefaultButtonInk>
+                    </li>
                   </div>
                 );
               })}

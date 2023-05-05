@@ -48,61 +48,61 @@ function Inicio(props: InicioProps): JSX.Element {
 function InicioJumbotronVacinaTomadaAnualmente() {
   return (
     <DefaultViewportAnimation>
-    <div
-      style={{
-        width: "min(100vw, 1366px)",
-      }}
-      className={"hidden md:block"}
-    >
-      <CColumn className="py-28 text-center">
-        <span
-          style={{
-            fontFamily: "Raleway",
-            fontStyle: "normal",
-            fontWeight: 400,
-            fontSize: 40,
-            textAlign: "center",
-            color: "#383A48",
-          }}
-        >
-          Por que a <b>vacina contra a gripe</b> deve
-          <br />
+      <div
+        style={{
+          width: "min(100vw, 1366px)",
+        }}
+        className={"hidden md:block"}
+      >
+        <CColumn className="py-28 text-center">
           <span
             style={{
-              borderBottom: ".7rem solid #961916",
+              fontFamily: "Raleway",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 40,
+              textAlign: "center",
+              color: "#383A48",
             }}
           >
-            ser tomada anualmente?
+            Por que a <b>vacina contra a gripe</b> deve
+            <br />
+            <span
+              style={{
+                borderBottom: ".7rem solid #961916",
+              }}
+            >
+              ser tomada anualmente?
+            </span>
           </span>
-        </span>
 
-        <br />
+          <br />
 
-        <span
-          style={{
-            fontFamily: "Raleway",
-            fontStyle: "normal",
-            fontWeight: 300,
-            fontSize: "18px",
-            lineHeight: "137.4%",
-            textAlign: "center",
-            color: "#383A48",
-            width: "min(100vw, 42rem)",
-          }}
-        >
-          Os vírus da gripe são bastante inquietos. Essa “inquietação” do vírus
-          leva a mutações constantes.{" "}
-          <b>
-            Ou seja: a vacina que você tomou em um determinado ano não é capaz
-            de garantir proteção para o ano seguinte,
-          </b>
-          porque pequenas modificações (variações) sempre acontecem.
-        </span>
-        <br />
-        <br />
-        <DefaultButton className="w-72">Solicitar proposta</DefaultButton>
-      </CColumn>
-    </div>
+          <span
+            style={{
+              fontFamily: "Raleway",
+              fontStyle: "normal",
+              fontWeight: 300,
+              fontSize: "18px",
+              lineHeight: "150.4%",
+              textAlign: "center",
+              color: "#383A48",
+              width: "min(100vw, 42rem)",
+            }}
+          >
+            Os vírus da gripe são bastante inquietos. Essa “inquietação” do
+            vírus leva a mutações constantes.{" "}
+            <b>
+              Ou seja: a vacina que você tomou em um determinado ano não é capaz
+              de garantir proteção para o ano seguinte,
+            </b>
+            porque pequenas modificações (variações) sempre acontecem.
+          </span>
+          <br />
+          <br />
+          <DefaultButton className="w-72">Solicitar proposta</DefaultButton>
+        </CColumn>
+      </div>
     </DefaultViewportAnimation>
   );
 }
@@ -110,57 +110,58 @@ function InicioJumbotronVacinaTomadaAnualmente() {
 function InicioJumbotronUtilizePlanoSaude() {
   return (
     <DefaultViewportAnimation>
-
-    <div className={"w-max flex flex-col align-middle justify-center"}>
-      <div
-        style={{
-          maxWidth: "min(100vw, 700px)",
-        }}
-        className={
-          "flex flex-col align-middle justify-center text-center py-24 px-6"
-        }
-      >
-        <span
+      <div className={"w-max flex flex-col align-middle justify-center"}>
+        <div
           style={{
-            fontFamily: "Raleway",
-            fontStyle: "normal",
-            fontSize: 40,
-            textAlign: "center",
-            color: "#383A48",
-            borderBottom: ".6rem solid #961916",
+            maxWidth: "min(100vw, 700px)",
           }}
+          className={
+            "flex flex-col align-middle justify-center text-center py-24 px-6"
+          }
         >
-          Utilize seu <b>plano de saúde</b> na Prime
-        </span>
+          <span
+            style={{
+              fontFamily: "Raleway",
+              fontStyle: "normal",
+              fontSize: 40,
+              textAlign: "center",
+              color: "#383A48",
+              borderBottom: ".6rem solid #961916",
+              // no break
+              whiteSpace: "nowrap",
+            }}
+          >
+            Utilize seu <b>plano de saúde</b> na Prime
+          </span>
 
-        <span
-          style={{
-            fontFamily: "Raleway",
-            fontStyle: "normal",
-            fontWeight: "300",
-            fontSize: "18px",
-            lineHeight: "137.4%",
-            textAlign: "center",
-            color: "#383A48",
-          }}
-          className={"py-6"}
-        >
-          Agora você pode fazer seus exames laboratoriais e infusões de
-          medicamentos com a Prime, utilizando seu plano de saúde
-        </span>
+          <span
+            style={{
+              fontFamily: "Raleway",
+              fontStyle: "normal",
+              fontWeight: "300",
+              fontSize: "18px",
+              lineHeight: "137.4%",
+              textAlign: "center",
+              color: "#383A48",
+            }}
+            className={"py-6"}
+          >
+            Agora você pode fazer seus exames laboratoriais e infusões de
+            medicamentos com a Prime, utilizando seu plano de saúde
+          </span>
 
-        <div>
-          <DefaultButton className={"px-14"}>
-            Confira os planos cobertos
-          </DefaultButton>
+          <div>
+            <DefaultButton className={"px-14"}>
+              Confira os planos cobertos
+            </DefaultButton>
+          </div>
         </div>
       </div>
-    </div>
     </DefaultViewportAnimation>
   );
 }
 
-function InicioJumbotronPedirAgoraVacina() {
+export function InicioJumbotronPedirAgoraVacina() {
   return (
     <DefaultViewportAnimation>
       <div
@@ -267,188 +268,191 @@ function InicioJumbotronSaibaComo() {
   var [active, setActive] = useState(true);
   return (
     <DefaultViewportAnimation>
-
-    <div
-      style={{
-        width: "100vw",
-      }}
-      className={"flex flex-row align-middle justify-center py-24"}
-    >
       <div
         style={{
-          width: "min(100vw, 1366px)",
+          width: "100vw",
         }}
-        className={"flex flex-col md:flex-row justify-between px-6"}
+        className={"flex flex-row align-middle justify-center py-24"}
       >
         <div
-          className={"flex-1"}
           style={{
-            flex: 2,
+            width: "min(100vw, 1366px)",
           }}
+          className={"flex flex-col md:flex-row justify-between px-6"}
         >
-          <TinyCrossfade>
-            {active ? (
-              <div key="dsds">
-                <span
-                  style={{
-                    fontFamily: "Raleway",
-                    fontStyle: "normal",
-                    fontWeight: 600,
-                    fontSize: "38px",
-                    lineHeight: "48px",
-                    display: "flex",
-                    alignItems: "center",
-                    color: "#390B0B",
-                  }}
-                >
-                  Saiba como a nossa <br />
-                  vacina chega até a <br />
-                  sua casa
-                </span>
-                <br />
-                <br />
-                <span
-                  style={{
-                    fontFamily: "Inter",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    fontSize: "16px",
-                    lineHeight: "25px",
-                    display: "flex",
-                    alignItems: "center",
-                    color: "#383A48",
-                  }}
-                >
-                  Trabalhamos com as principais fabricantes multinacionais de
-                  agentes imunizantes: GSK, MSD, Pfizer e Sanofi. As vacinas
-                  chegam até a Prime por meio de distribuidores nacionais,
-                  certificados habilitados para a função.
-                  <br />
-                  <br />
-                  Uma vez na Prime, ficam armazenadas em câmaras frias fixas da
-                  Indrel®️ - uma das mais conceituadas do mercado e específicas
-                  para armazenamento de vacinas.
-                  <br />
-                  <br />
-                  Com gerador próprio, que possui 48 horas de duração, elas
-                  garantem a qualidade das vacinas mesmo que haja queda de
-                  energia.
-                  <br />
-                  <br />
-                </span>
-              </div>
-            ) : (
-              <div key="dsdsdsd">
-                <span
-                  style={{
-                    fontFamily: "Raleway",
-                    fontStyle: "normal",
-                    fontWeight: 600,
-                    fontSize: "38px",
-                    lineHeight: "48px",
-                    display: "flex",
-                    alignItems: "center",
-                    color: "#390B0B",
-                  }}
-                >
-                  Saiba como a nossa <br />
-                  vacina chega até a <br />
-                  sua casa
-                </span>
-                <br />
-                <br />
-                <span
-                  style={{
-                    fontFamily: "Inter",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    fontSize: "16px",
-                    lineHeight: "25px",
-                    display: "flex",
-                    alignItems: "center",
-                    color: "#383A48",
-                  }}
-                >
-                  Trabalhamos com as principais fabricantes multinacionais de
-                  agentes imunizantes: GSK, MSD, Pfizer e Sanofi. As vacinas
-                  chegam até a Prime por meio de distribuidores nacionais,
-                  certificados habilitados para a função.
-                  <br />
-                  <br />
-                  Uma vez na Prime, ficam armazenadas em câmaras frias fixas da
-                  Indrel®️ - uma das mais conceituadas do mercado e específicas
-                  para armazenamento de vacinas.
-                  <br />
-                  <br />
-                  Com gerador próprio, que possui 48 horas de duração, elas
-                  garantem a qualidade das vacinas mesmo que haja queda de
-                  energia.
-                  <br />
-                  <br />
-                </span>
-              </div>
-            )}
-          </TinyCrossfade>
-
-          <div>
-            <Row
-              className={"  w-min flex-nowrap"}
-              style={{
-                border: "1px solid #FFACAA",
-                borderRadius: "999px",
-              }}
-            >
-              <DefaultButtonInk
-                className={"text p-3"}
-                style={{
-                  borderRadius: "999px 0 0 999px",
-                }}
-                onClick={() => {
-                  setActive(!active);
-                }}
-              >
-                <button className={"px-5 py-3"} style={{}}>
-                  <Chevron />
-                </button>
-              </DefaultButtonInk>
-
-              <DefaultButtonInk
-                onClick={() => {
-                  setActive(!active);
-                }}
-                className={"text p-3"}
-                style={{
-                  borderRadius: "0 999px 999px 0",
-                }}
-              >
-                <button className={"px-5 py-3"} style={{}}>
-                  {" "}
-                  <Chevron
+          <div
+            className={"flex-1"}
+            style={{
+              flex: 2,
+            }}
+          >
+            <TinyCrossfade>
+              {active ? (
+                <div key="dsds">
+                  <span
                     style={{
-                      transform: "rotate(180deg)",
+                      fontFamily: "Raleway",
+                      fontStyle: "normal",
+                      fontWeight: 600,
+                      fontSize: "38px",
+                      lineHeight: "48px",
+                      display: "flex",
+                      alignItems: "center",
+                      color: "#390B0B",
                     }}
-                  />
-                </button>
-              </DefaultButtonInk>
-            </Row>
+                  >
+                    Saiba como a nossa <br />
+                    vacina chega até a <br />
+                    sua casa
+                  </span>
+                  <br />
+                  <br />
+                  <span
+                    style={{
+                      fontFamily: "Inter",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      fontSize: "16px",
+                      lineHeight: "25px",
+                      display: "flex",
+                      alignItems: "center",
+                      color: "#383A48",
+                    }}
+                  >
+                    Trabalhamos com as principais fabricantes multinacionais de
+                    agentes imunizantes: GSK, MSD, Pfizer e Sanofi. As vacinas
+                    chegam até a Prime por meio de distribuidores nacionais,
+                    certificados habilitados para a função.
+                    <br />
+                    <br />
+                    Uma vez na Prime, ficam armazenadas em câmaras frias fixas
+                    da Indrel®️ - uma das mais conceituadas do mercado e
+                    específicas para armazenamento de vacinas.
+                    <br />
+                    <br />
+                    Com gerador próprio, que possui 48 horas de duração, elas
+                    garantem a qualidade das vacinas mesmo que haja queda de
+                    energia.
+                    <br />
+                    <br />
+                  </span>
+                </div>
+              ) : (
+                <div key="dsdsdsd">
+                  <span
+                    style={{
+                      fontFamily: "Raleway",
+                      fontStyle: "normal",
+                      fontWeight: 600,
+                      fontSize: "38px",
+                      lineHeight: "48px",
+                      display: "flex",
+                      alignItems: "center",
+                      color: "#390B0B",
+                    }}
+                  >
+                    Saiba como a nossa <br />
+                    vacina chega até a <br />
+                    sua casa
+                  </span>
+                  <br />
+                  <br />
+                  <span
+                    style={{
+                      fontFamily: "Inter",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      fontSize: "16px",
+                      lineHeight: "25px",
+                      display: "flex",
+                      alignItems: "center",
+                      color: "#383A48",
+                    }}
+                  >
+                    Trabalhamos com as principais fabricantes multinacionais de
+                    agentes imunizantes: GSK, MSD, Pfizer e Sanofi. As vacinas
+                    chegam até a Prime por meio de distribuidores nacionais,
+                    certificados habilitados para a função.
+                    <br />
+                    <br />
+                    Uma vez na Prime, ficam armazenadas em câmaras frias fixas
+                    da Indrel®️ - uma das mais conceituadas do mercado e
+                    específicas para armazenamento de vacinas.
+                    <br />
+                    <br />
+                    Com gerador próprio, que possui 48 horas de duração, elas
+                    garantem a qualidade das vacinas mesmo que haja queda de
+                    energia.
+                    <br />
+                    <br />
+                  </span>
+                </div>
+              )}
+            </TinyCrossfade>
+
+            <div>
+              <Row
+                className={"  w-min flex-nowrap"}
+                style={{
+                  border: "1px solid #FFACAA",
+                  borderRadius: "999px",
+                }}
+              >
+                <DefaultButtonInk
+                  className={"text p-3"}
+                  style={{
+                    borderRadius: "999px 0 0 999px",
+                  }}
+                  onClick={() => {
+                    setActive(!active);
+                  }}
+                >
+                  <button className={"px-5 py-3"} style={{}}>
+                    <Chevron />
+                  </button>
+                </DefaultButtonInk>
+
+                <DefaultButtonInk
+                  onClick={() => {
+                    setActive(!active);
+                  }}
+                  className={"text p-3"}
+                  style={{
+                    borderRadius: "0 999px 999px 0",
+                  }}
+                >
+                  <button className={"px-5 py-3"} style={{}}>
+                    {" "}
+                    <Chevron
+                      style={{
+                        transform: "rotate(180deg)",
+                      }}
+                    />
+                  </button>
+                </DefaultButtonInk>
+              </Row>
+            </div>
+          </div>
+          <div
+            className={"flex-1 flex justify-end"}
+            style={{
+              flex: 3,
+            }}
+          >
+            <TinyCrossfade className="component-wrapper">
+              {active ? (
+                <img src="assets/images/geladeira.png" key={"asd"}></img>
+              ) : (
+                <img
+                  src="assets/images/potevacina.png"
+                  key="dsa"
+                  width={200}
+                ></img>
+              )}
+            </TinyCrossfade>
           </div>
         </div>
-        <div
-          className={"flex-1 flex justify-end"}
-          style={{
-            flex: 3,
-          }}
-        >
-          <TinyCrossfade className="component-wrapper">
-            {active ? (
-              <img src="assets/images/geladeira.png" key={"asd"}></img>
-            ) : (
-              <img src="assets/images/potevacina.png" key="dsa" width={200}></img>
-            )}
-          </TinyCrossfade>
-        </div>
       </div>
-    </div>
     </DefaultViewportAnimation>
   );
 }
@@ -456,116 +460,115 @@ function InicioJumbotronSaibaComo() {
 function InicioJumbotronBlog() {
   return (
     <DefaultViewportAnimation>
-
-    <div
-      className={"flex flex-col items-center justify-center"}
-      style={{
-        width: "100vw",
-        background: "#FFEFEE",
-      }}
-    >
       <div
-        className={"flex flex-col items-start justify-start py-16 px-6"}
+        className={"flex flex-col items-center justify-center"}
         style={{
-          width: "min(100vw, 1366px)",
+          width: "100vw",
+          background: "#FFEFEE",
         }}
       >
-        <div>
-          <span
-            style={{
-              fontFamily: "Raleway",
-              fontStyle: "normal",
-              fontWeight: "300",
-              fontSize: "40px",
-              lineHeight: "47px",
-              textAlign: "center",
-              color: "#390B0B",
-              borderBottom: "8px solid  #961916",
-            }}
-          >
-            Informações sobre Saúde
-          </span>
-          <br />
-          <br />
-
-          <span
-            style={{
-              fontFamily: "Raleway",
-              fontStyle: "normal",
-              fontWeight: "700",
-              fontSize: "18px",
-              lineHeight: "21px",
-              color: "#390B0B",
-            }}
-          >
-            Acesse o Blog
-          </span>
-        </div>{" "}
-        <CRow
+        <div
+          className={"flex flex-col items-start justify-start py-16 px-6"}
           style={{
-            width: "100%",
-            justifyContent: "space-between",
+            width: "min(100vw, 1366px)",
           }}
-          className={"py-12 gap-14 flex-col md:flex-row"}
         >
-          {["asd", "dsa", "asdd"].map((e) => {
-            return (
-              <div key={e} className={"flex flex-col md:w-1/4"}>
-                <Row
-                  style={{
-                    backgroundColor: "#360707",
-                    width: "100%",
-                    height: "10rem",
-                  }}
-                  className={"rounded-xl"}
-                ></Row>
-                <div
-                  style={{
-                    fontFamily: "Raleway",
-                    fontStyle: "normal",
-                    fontWeight: 700,
-                    fontSize: "20px",
-                    lineHeight: "23px",
-                    color: "#360707",
-                  }}
-                  className={"py-5"}
-                >
-                  A importância da Vacinação
-                </div>
-                <div
-                  style={{
-                    fontFamily: "Raleway",
-                    fontStyle: "normal",
-                    fontWeight: 300,
-                    fontSize: "14px",
-                    lineHeight: "162.9%",
-                    color: "rgba(18, 17, 17, 0.6)",
-                  }}
-                  className={"py-5"}
-                >
-                  Lorem ipsum dolor sit amet lorem ipsum dolor sitlorem ipsum
-                </div>
-                <Row className={"flex justify-end"}>
-                  <DefaultButtonInk
+          <div>
+            <span
+              style={{
+                fontFamily: "Raleway",
+                fontStyle: "normal",
+                fontWeight: "300",
+                fontSize: "40px",
+                lineHeight: "47px",
+                textAlign: "center",
+                color: "#390B0B",
+                borderBottom: "8px solid  #961916",
+              }}
+            >
+              Informações sobre Saúde
+            </span>
+            <br />
+            <br />
+
+            <span
+              style={{
+                fontFamily: "Raleway",
+                fontStyle: "normal",
+                fontWeight: "700",
+                fontSize: "18px",
+                lineHeight: "21px",
+                color: "#390B0B",
+              }}
+            >
+              Acesse o Blog
+            </span>
+          </div>{" "}
+          <CRow
+            style={{
+              width: "100%",
+              justifyContent: "space-between",
+            }}
+            className={"py-12 gap-14 flex-col md:flex-row"}
+          >
+            {["asd", "dsa", "asdd"].map((e) => {
+              return (
+                <div key={e} className={"flex flex-col md:w-1/4"}>
+                  <Row
                     style={{
-                      fontFamily: "Montserrat",
-                      fontStyle: "normal",
-                      fontWeight: "500",
-                      fontSize: "15px",
-                      lineHeight: "18px",
-                      textAlign: "center",
-                      color: "#971916",
+                      backgroundColor: "#360707",
+                      width: "100%",
+                      height: "10rem",
                     }}
+                    className={"rounded-xl"}
+                  ></Row>
+                  <div
+                    style={{
+                      fontFamily: "Raleway",
+                      fontStyle: "normal",
+                      fontWeight: 700,
+                      fontSize: "20px",
+                      lineHeight: "23px",
+                      color: "#360707",
+                    }}
+                    className={"py-5"}
                   >
-                    <button className={"p-2"}>{"Ler mais >"}</button>
-                  </DefaultButtonInk>
-                </Row>
-              </div>
-            );
-          })}
-        </CRow>
+                    A importância da Vacinação
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "Raleway",
+                      fontStyle: "normal",
+                      fontWeight: 300,
+                      fontSize: "14px",
+                      lineHeight: "162.9%",
+                      color: "rgba(18, 17, 17, 0.6)",
+                    }}
+                    className={"py-5"}
+                  >
+                    Lorem ipsum dolor sit amet lorem ipsum dolor sitlorem ipsum
+                  </div>
+                  <Row className={"flex justify-end"}>
+                    <DefaultButtonInk
+                      style={{
+                        fontFamily: "Montserrat",
+                        fontStyle: "normal",
+                        fontWeight: "500",
+                        fontSize: "15px",
+                        lineHeight: "18px",
+                        textAlign: "center",
+                        color: "#971916",
+                      }}
+                    >
+                      <button className={"p-2"}>{"Ler mais >"}</button>
+                    </DefaultButtonInk>
+                  </Row>
+                </div>
+              );
+            })}
+          </CRow>
+        </div>
       </div>
-    </div>
     </DefaultViewportAnimation>
   );
 }
@@ -729,7 +732,6 @@ function InicioJumbotronExamesVacinacaoInfusao() {
               <motion.button
                 className="w-72 h-12"
                 whileTap={{
-                  scale: 0.98,
                 }}
               >
                 <div
@@ -839,6 +841,7 @@ export function DefaultButton(props) {
 }
 
 function InicioJumbotronVacinacaoCondominio() {
+  const [selected, setSelected] = useState(1);
   return (
     <DefaultViewportAnimation>
       <InicioJumbotronVacinacaoCondominioWrapper>
@@ -850,72 +853,151 @@ function InicioJumbotronVacinacaoCondominio() {
               alignItems: "flex-start",
             }}
           >
-            <div>
-              <span
-                style={{
-                  fontFamily: "Raleway",
-                  fontWeight: "400",
-                  fontSize: "2.7rem",
-                  lineHeight: "47px",
-                  color: "#390B0B",
-                }}
-              >
-                {"Vacinação contra a gripe"}
-                <br className={"md:block"} />
-                <span
-                  style={{
-                    borderBottom: "8px solid rgba(150, 25, 22)",
-                  }}
-                  className={"text-4xl"}
-                >
-                  {"no seu "}
+            <TinyCrossfade>
+              {selected == 1 ? (
+                <div key={1}>
                   <span
                     style={{
                       fontFamily: "Raleway",
-                      fontStyle: "normal",
-                      fontWeight: "bold",
-                      color: "#971916",
+                      fontWeight: "400",
+                      fontSize: "2.7rem",
+                      lineHeight: "47px",
+                      color: "#390B0B",
                     }}
                   >
-                    {"Condomínio"}
+                    {"Vacinação contra a gripe"}
+                    <br className={"md:block"} />
+                    <span
+                      style={{
+                        borderBottom: "8px solid rgba(150, 25, 22)",
+                      }}
+                      className={"text-4xl"}
+                    >
+                      {"no seu "}
+                      <span
+                        style={{
+                          fontFamily: "Raleway",
+                          fontStyle: "normal",
+                          fontWeight: "bold",
+                          color: "#971916",
+                        }}
+                      >
+                        {"Condomínio"}
+                      </span>
+                    </span>
                   </span>
-                </span>
-              </span>
-            </div>
+                  <br />
+                  <br />
+                  <br />
+                  <span
+                    style={{
+                      paddingTop: "2rem",
+                      fontFamily: "Raleway",
+                      fontStyle: "normal",
+                      fontWeight: 300,
+                      fontSize: "1.2rem",
+                      color: "#390B0B",
+                    }}
+                  >
+                    {`lorem ipsum dolor sit amet lorem ipsum dolor sit`}
+                    <br />
+                    amet lorem ipsum dolor sit amet lorem ipsum dolor sit
+                    <br />
+                    <br />
+                    Lorem ipsum dolor sit amet lorem ipsum dolor sit
+                  </span>
 
-            <span
-              style={{
-                paddingTop: "2rem",
-                fontFamily: "Raleway",
-                fontStyle: "normal",
-                fontWeight: 300,
-                fontSize: "1.2rem",
-                color: "#390B0B",
-              }}
-            >
-              {`lorem ipsum dolor sit amet lorem ipsum dolor sit`}
-              <br />
-              amet lorem ipsum dolor sit amet lorem ipsum dolor sit
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet lorem ipsum dolor sit
-            </span>
+                  <div
+                    style={{
+                      height: "3rem",
+                    }}
+                  />
+                  <div
+                    className={
+                      "flex justify-center w-max align-middle md:justify-start"
+                    }
+                    style={{
+                      width: "100%",
+                    }}
+                  >
+                    <DefaultButton>
+                      Leve proteção ao seu condomínio!
+                    </DefaultButton>
+                  </div>
+                </div>
+              ) : (
+                <div key={2}>
+                  <span
+                    style={{
+                      fontFamily: "Raleway",
+                      fontWeight: "400",
+                      fontSize: "2.7rem",
+                      lineHeight: "47px",
+                      color: "#390B0B",
+                    }}
+                  >
+                    {"Vacinação contra a gripe"}
+                    <br className={"md:block"} />
+                    <span
+                      style={{
+                        borderBottom: "8px solid rgba(150, 25, 22)",
+                      }}
+                      className={"text-4xl"}
+                    >
+                      {"no seu "}
+                      <span
+                        style={{
+                          fontFamily: "Raleway",
+                          fontStyle: "normal",
+                          fontWeight: "bold",
+                          color: "#971916",
+                        }}
+                      >
+                        {"Condomínio"}
+                      </span>
+                    </span>
+                  </span>
+                  <br />
+                  <br />
+                  <br />
+                  <span
+                    style={{
+                      paddingTop: "2rem",
+                      fontFamily: "Raleway",
+                      fontStyle: "normal",
+                      fontWeight: 300,
+                      fontSize: "1.2rem",
+                      color: "#390B0B",
+                    }}
+                  >
+                    {`lorem ipsum dolor sit amet lorem ipsum dolor sit`}
+                    <br />
+                    amet lorem ipsum dolor sit amet lorem ipsum dolor sit
+                    <br />
+                    <br />
+                    Lorem ipsum dolor sit amet lorem ipsum dolor sit
+                  </span>
 
-            <div
-              style={{
-                height: "3rem",
-              }}
-            />
-            <div
-              className={
-                "flex justify-center w-max align-middle md:justify-start"
-              }
-              style={{
-                width: "100%",
-              }}
-            >
-              <DefaultButton>Leve proteção ao seu condomínio!</DefaultButton>
-            </div>
+                  <div
+                    style={{
+                      height: "3rem",
+                    }}
+                  />
+                  <div
+                    className={
+                      "flex justify-center w-max align-middle md:justify-start"
+                    }
+                    style={{
+                      width: "100%",
+                    }}
+                  >
+                    <DefaultButton>
+                      Leve proteção ao seu condomínio!
+                    </DefaultButton>
+                  </div>
+                </div>
+              )}
+            </TinyCrossfade>
           </CColumn>
 
           <CRow
@@ -932,18 +1014,28 @@ function InicioJumbotronVacinacaoCondominio() {
               style={{
                 borderRadius: "30px",
                 overflow: "hidden",
+                cursor: "pointer",
               }}
             >
-              <Image
+              <img
                 src="/assets/images/vacinacao1.png"
                 alt="vacinacao"
                 height={450}
                 width={300}
+                style={{
+                  width: selected == 1 ? "300px" : "200px",
+                  height: selected == 1 ? "450px" : "300px",
+                  transitionDuration: "0.5s",
+                }}
+                onMouseEnter={() => {
+                  setSelected(1);
+                }}
               />
             </motion.div>
             <div
               style={{
                 width: "3rem",
+                height: "450px",
               }}
             />
             <motion.div
@@ -954,13 +1046,22 @@ function InicioJumbotronVacinacaoCondominio() {
               style={{
                 borderRadius: "30px",
                 overflow: "hidden",
+                cursor: "pointer",
               }}
             >
-              <Image
+              <img
                 src="/assets/images/vacinacao2.png"
                 alt="vacinacao"
-                height={300}
-                width={200}
+                height={450}
+                width={300}
+                style={{
+                  width: selected == 2 ? "300px" : "200px",
+                  height: selected == 2 ? "450px" : "300px",
+                  transitionDuration: "0.5s",
+                }}
+                onMouseEnter={() => {
+                  setSelected(2);
+                }}
               />
             </motion.div>
           </CRow>
@@ -1010,7 +1111,7 @@ const Column = styled("div")({
   flexDirection: `column`,
 });
 
-const InicioWrapper: any = styled("div")({
+export const InicioWrapper: any = styled("div")({
   backgroundColor: `rgba(255, 255, 255, 1)`,
   display: `flex`,
   position: `relative`,
@@ -1023,6 +1124,7 @@ const InicioWrapper: any = styled("div")({
   boxSizing: `border-box`,
   overflow: `hidden`,
   height: "auto",
+  minHeight: "100vh",
 });
 
 const InicioContainerExamesWrapper: any = styled("div")({
@@ -1163,7 +1265,7 @@ const HomeOndeVoceEstiverSublinhado: any = styled("div")({
   marginTop: "-5spx",
 });
 
-const Rectangle35: any = styled("img")({
+export const Rectangle35: any = styled("img")({
   height: `456px`,
   width: `1366px`,
   margin: `0px`,
