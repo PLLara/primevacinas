@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { StyledEngineProvider } from "@mui/material/styles";
-import InicioComp from "components/Inicio/Inicio";
+import Blog from "components/Inicio/blog";
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
-        <InicioComp />
+        <Blog />
       </main>
     </div>
   );

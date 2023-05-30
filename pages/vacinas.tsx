@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import styled from "@emotion/styled";
-import { DefaultButtonInk } from "components/Header/DefaultButtonInk";
+import { DefaultButtonInk } from "components/global/DefaultButtonInk";
 import {
   DefaultButton,
   InicioJumbotronPedirAgoraVacina,
@@ -10,7 +10,7 @@ import { DefaultColors } from "components/global/global";
 import Link from "next/link";
 import { HeaderProps, IconButton, Dropdown, Row } from "rsuite";
 import VacinasPrincipalImagem from "../public/assets/images/vacinasprincipal.svg";
-import { DefaultViewportAnimation } from "components/Inicio/DefaultViewportAnimation";
+import { DefaultViewportAnimation } from "components/global/DefaultViewportAnimation";
 import { useState } from "react";
 
 export default function Vacinas() {

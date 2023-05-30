@@ -5,7 +5,7 @@ import { HeaderProps } from "types";
 import { Dropdown, IconButton } from "rsuite";
 import "rsuite/dist/rsuite.min.css";
 import { DefaultColors } from "components/global/global";
-import { DefaultButtonInk } from "./DefaultButtonInk";
+import { DefaultButtonInk } from "../global/DefaultButtonInk";
 import { Link } from "framer";
 
 function DefaultHeader(props: HeaderProps): JSX.Element {
@@ -93,8 +93,12 @@ function DefaultHeader(props: HeaderProps): JSX.Element {
               link: "https://www.primevacinas.com.br/blog",
               isDown: false,
             },
-          ].map((e) => (
-            <HomeNavButton key={e.text}>{[e.text]}</HomeNavButton>
+          ].map((e,index) => (
+            <HomeNavButton key={e.text}
+              href={index %2 == 0 ? "/estatica" : '/blog'}
+            >
+              <p>{e.text}</p>
+            </HomeNavButton>
           ))}
         </Opções>
       </div>
@@ -161,13 +165,15 @@ function HeaderSpacing() {
   return (
     <>
       <div
+        // visible only on md
+        className={"hidden md:flex"}
         style={{
           width: "25px",
         }}
       />
       <div
+        className={"hidden md:flex"}
         style={{
-          display: `flex`,
           flexDirection: `column`,
           justifyContent: `center`,
           alignItems: `center`,
@@ -179,6 +185,7 @@ function HeaderSpacing() {
         }}
       />
       <div
+        className={"hidden md:flex"}
         style={{
           width: "25px",
         }}
@@ -187,9 +194,12 @@ function HeaderSpacing() {
   );
 }
 
-function HomeNavButton(props) {
+function HomeNavButton(props: {
+  href: string;
+  children: JSX.Element | JSX.Element[];
+}) {
   return (
-    <Link href={"/estatica"}>
+    <Link href={props.href}>
       <IconButton
         style={{
           textAlign: `center`,

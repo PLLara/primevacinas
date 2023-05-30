@@ -5,11 +5,10 @@ import { styled } from "@mui/material/styles";
 import DefaultHeader from "components/Header/Header";
 import { InicioProps } from "types";
 import { motion } from "framer-motion";
-import { DefaultViewportAnimation } from "./DefaultViewportAnimation";
-import { DefaultButtonInk } from "../Header/DefaultButtonInk";
+import { DefaultViewportAnimation } from "../global/DefaultViewportAnimation";
+import { DefaultButtonInk } from "../global/DefaultButtonInk";
 import SvgRectangles from "../../public/assets/images/retangulos.svg";
 import Chevron from "../../public/assets/images/chevron.svg";
-import Image from "next/image";
 import { Carousel } from "rsuite";
 import TinyCrossfade from "react-tiny-crossfade";
 
@@ -128,7 +127,6 @@ function InicioJumbotronUtilizePlanoSaude() {
               color: "#383A48",
               borderBottom: ".6rem solid #961916",
               // no break
-              whiteSpace: "nowrap",
             }}
           >
             Utilize seu <b>plano de saúde</b> na Prime
@@ -243,7 +241,7 @@ function InicioJumbotronPedirAgoraVacinaCarousel() {
           background: "transparent !important",
         }}
       >
-        {["a", "b", "c", "d", "e", "f", "g"].map((e) => (
+        {["a", "b", "c", "d", "e", "f"].map((e) => (
           <Row
             key={e}
             style={{
@@ -301,9 +299,7 @@ function InicioJumbotronSaibaComo() {
                       color: "#390B0B",
                     }}
                   >
-                    Saiba como a nossa <br />
-                    vacina chega até a <br />
-                    sua casa
+                    Saiba como a nossa vacina chega até a sua casa
                   </span>
                   <br />
                   <br />
@@ -351,9 +347,7 @@ function InicioJumbotronSaibaComo() {
                       color: "#390B0B",
                     }}
                   >
-                    Saiba como a nossa <br />
-                    vacina chega até a <br />
-                    sua casa
+                    Saiba como a nossa vacina chega até a sua casa
                   </span>
                   <br />
                   <br />
@@ -390,9 +384,14 @@ function InicioJumbotronSaibaComo() {
               )}
             </TinyCrossfade>
 
-            <div>
+            <div
+              className={
+                "flex justify-center md:justify-start mt-4 mb-16 md:mt-0 md:m"
+              }
+              style={{}}
+            >
               <Row
-                className={"  w-min flex-nowrap"}
+                className={"w-min flex-nowrap items-center bg-red-50"}
                 style={{
                   border: "1px solid #FFACAA",
                   borderRadius: "999px",
@@ -693,7 +692,7 @@ function InicioJumbotronExamesVacinacaoInfusao() {
           {
             title: "Exames",
             icon: "assets/images/bloodsample.png",
-            description: `\n| Laboratoriais\n| Biologia Molecular\n`,
+            description: `| Laboratoriais\n| Biologia Molecular\n\n`,
             cta: "Consultar Resultados",
           },
           {
@@ -729,10 +728,7 @@ function InicioJumbotronExamesVacinacaoInfusao() {
             <LaboratoriaisBiologi>{item.description}</LaboratoriaisBiologi>
             <div className="mt-8" />
             <DefaultButtonInk>
-              <motion.button
-                className="w-72 h-12"
-            
-              >
+              <motion.button className="w-72 h-12">
                 <div
                   className="flex items-center justify-center flex-1 h-full py-2.5 border rounded-lg border-red-500"
                   style={{
@@ -856,10 +852,10 @@ function InicioJumbotronVacinacaoCondominio() {
               {selected == 1 ? (
                 <div key={1}>
                   <span
+                    className={"text-5xl"}
                     style={{
                       fontFamily: "Raleway",
                       fontWeight: "400",
-                      fontSize: "2.7rem",
                       lineHeight: "47px",
                       color: "#390B0B",
                     }}
@@ -870,7 +866,7 @@ function InicioJumbotronVacinacaoCondominio() {
                       style={{
                         borderBottom: "8px solid rgba(150, 25, 22)",
                       }}
-                      className={"text-4xl"}
+                      className={"text-3xl md:text-5xl"}
                     >
                       {"no seu "}
                       <span
@@ -1026,6 +1022,7 @@ function InicioJumbotronVacinacaoCondominio() {
                   height: selected == 1 ? "450px" : "300px",
                   transitionDuration: "0.5s",
                 }}
+                className={""}
                 onMouseEnter={() => {
                   setSelected(1);
                 }}
@@ -1053,6 +1050,8 @@ function InicioJumbotronVacinacaoCondominio() {
                 alt="vacinacao"
                 height={450}
                 width={300}
+                // only visible on md
+                className="hidden md:block"
                 style={{
                   width: selected == 2 ? "300px" : "200px",
                   height: selected == 2 ? "450px" : "300px",
@@ -1187,6 +1186,8 @@ const LaboratoriaisBiologi: any = styled("div")({
   textDecoration: `none`,
   textTransform: `none`,
   left: `50px`,
+  marginTop: `20px`,
+  marginBottom: `20px`,
   top: `158px`,
 });
 
