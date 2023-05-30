@@ -11,6 +11,7 @@ import Link from "next/link";
 import { HeaderProps, IconButton, Dropdown, Row } from "rsuite";
 import VacinasPrincipalImagem from "../public/assets/images/vacinasprincipal.svg";
 import { DefaultViewportAnimation } from "components/Inicio/DefaultViewportAnimation";
+import { useState } from "react";
 
 export default function Vacinas() {
   return (
@@ -49,6 +50,7 @@ export default function Vacinas() {
 }
 
 function VacinasVacinas() {
+  const [selected, setSelected] = useState(0);
   return (
     <div
       style={{
@@ -118,7 +120,7 @@ function VacinasVacinas() {
                 "COVID-19",
                 "Pacientes Oncológicos",
                 "Em Tratamento Com Imunossupressores",
-              ].map((item) => {
+              ].map((item, index) => {
                 return (
                   <div
                     key={item}
@@ -126,6 +128,9 @@ function VacinasVacinas() {
                       cursor: "pointer",
                       marginBottom: "5px",
                       width: "100%",
+                    }}
+                    onClick={() => {
+                      setSelected(index);
                     }}
                   >
                     <li
@@ -152,6 +157,8 @@ function VacinasVacinas() {
                         }}
                       >
                         <input
+                          // selected if index == selected
+                          checked={index == selected}
                           type="radio"
                           name="a"
                           id={"a" + item}
@@ -209,36 +216,75 @@ function VacinasVacinas() {
               }}
             />
             <ul className={"pl-5 pt-5"}>
-              {["Crianças", "Adolescentes", "Adultos"].map((item) => {
+              {["Crianças", "Adolescentes", "Adultos"].map((item, index) => {
                 return (
-                  <>
-                    <DefaultButtonInk key="item" className={""}>
-                      <li
-                        className={
-                          "flex flex-row items-center justify-start py-2"
-                        }
+                  <div
+                    key={item}
+                    style={{
+                      cursor: "pointer",
+                      marginBottom: "5px",
+                      width: "100%",
+                    }}
+                    onClick={() => {
+                      setSelected(index);
+                    }}
+                  >
+                    <li
+                      className={
+                        "flex flex-row items-center justify-start py-2"
+                      }
+                      style={{
+                        cursor: "pointer",
+                        width: "300px",
+                      }}
+                    >
+                      <DefaultButtonInk
+                        onClick={() => {
+                          console.log("click");
+                        }}
+                        key="item"
+                        className={""}
+                        style={{
+                          width: "300px",
+                          paddingBottom: "15px",
+                          paddingTop: "15px",
+                          alignItems: "start",
+                          justifyContent: "flex-start",
+                        }}
                       >
                         <input
+                          // selected if index == selected
+                          checked={index == selected}
                           type="radio"
-                          name="b"
-                          id={"b" + item}
+                          name="c"
+                          id={"c" + item}
                           style={{
                             width: "16px",
                             height: "16px",
                           }}
                         />
-                        &nbsp;&nbsp; &nbsp;
-                        <img
-                          src={"assets/images/" + item + ".png"}
-                          alt=""
-                          width={20}
-                        />
-                        &nbsp;&nbsp;
-                        <label htmlFor={"b" + item}>{item}</label>
-                      </li>
-                    </DefaultButtonInk>
-                    <br />
-                  </>
+                        <label
+                          htmlFor={"c" + item}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            cursor: "pointer",
+                          }}
+                        >
+                          <img
+                            src={"assets/images/" + item + ".png"}
+                            alt=""
+                            width={20}
+                            style={{
+                              marginLeft: "12px",
+                              marginRight: "8px",
+                            }}
+                          />
+                          {item}
+                        </label>
+                      </DefaultButtonInk>
+                    </li>
+                  </div>
                 );
               })}
             </ul>
@@ -266,36 +312,75 @@ function VacinasVacinas() {
               }}
             />
             <ul className={"pl-5 pt-5"}>
-              {["Crianças", "Adolescentes", "Adultos"].map((item) => {
+              {["Crianças", "Adolescentes", "Adultos"].map((item, index) => {
                 return (
-                  <>
-                    <DefaultButtonInk key="item" className={""}>
-                      <li
-                        className={
-                          "flex flex-row items-center justify-start py-2"
-                        }
+                  <div
+                    key={item}
+                    style={{
+                      cursor: "pointer",
+                      marginBottom: "5px",
+                      width: "100%",
+                    }}
+                    onClick={() => {
+                      setSelected(index);
+                    }}
+                  >
+                    <li
+                      className={
+                        "flex flex-row items-center justify-start py-2"
+                      }
+                      style={{
+                        cursor: "pointer",
+                        width: "300px",
+                      }}
+                    >
+                      <DefaultButtonInk
+                        onClick={() => {
+                          console.log("click");
+                        }}
+                        key="item"
+                        className={""}
+                        style={{
+                          width: "300px",
+                          paddingBottom: "15px",
+                          paddingTop: "15px",
+                          alignItems: "start",
+                          justifyContent: "flex-start",
+                        }}
                       >
                         <input
+                          // selected if index == selected
+                          checked={index == selected}
                           type="radio"
-                          name="c"
-                          id={"c" + item}
+                          name="b"
+                          id={"b" + item}
                           style={{
                             width: "16px",
                             height: "16px",
                           }}
                         />
-                        &nbsp;&nbsp; &nbsp;
-                        <img
-                          src={"assets/images/" + item + ".png"}
-                          alt=""
-                          width={20}
-                        />
-                        &nbsp;&nbsp;
-                        <label htmlFor={"c" + item}>&nbsp;&nbsp;{item}</label>
-                      </li>
-                    </DefaultButtonInk>
-                    <br />
-                  </>
+                        <label
+                          htmlFor={"b" + item}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            cursor: "pointer",
+                          }}
+                        >
+                          <img
+                            src={"assets/images/" + item + ".png"}
+                            alt=""
+                            width={20}
+                            style={{
+                              marginLeft: "12px",
+                              marginRight: "8px",
+                            }}
+                          />
+                          {item}
+                        </label>
+                      </DefaultButtonInk>
+                    </li>
+                  </div>
                 );
               })}
             </ul>
@@ -315,93 +400,98 @@ function VacinasVacinas() {
             }}
             className="grid-cols-1 md:grid-cols-2 content-center"
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((item) => {
-              return (
-                <DefaultViewportAnimation key={item}>
-                  <div
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(
+              (item, index) => {
+                return (
+                  <DefaultViewportAnimation
                     key={item}
-                    style={{
-                      maxWidth: "380px",
-                      margin: "0 auto",
-                    }}
+                    delay={index % 2 == 1 ? 0.1 : 0}
                   >
                     <div
+                      key={item}
                       style={{
-                        background: "#FFF5F5",
-                        display: "flex",
+                        maxWidth: "380px",
+                        margin: "0 auto",
                       }}
-                      className={"p-5 rounded-xl"}
                     >
-                      <img
-                        src="assets/images/potevacina.png"
-                        alt=""
-                        width={50}
-                        style={{
-                          transform: "scale(1.4)",
-                          transformOrigin: "bottom center",
-                        }}
-                      />
                       <div
-                        className={"pl-10"}
                         style={{
-                          fontFamily: "Roboto",
-                          fontStyle: "normal",
-                          fontWeight: "600",
-                          fontSize: "14px",
-                          color: "#3B3B3B",
+                          background: "#FFF5F5",
                           display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "space-between",
                         }}
+                        className={"p-5 rounded-xl"}
                       >
-                        <div>Vacina Quadrivalente da Gripe (Cepas 2023)</div>
-                        <div>
-                          <span>
-                            <span
-                              style={{
-                                fontFamily: "Roboto",
-                                fontStyle: "normal",
-                                fontWeight: 700,
-                                fontSize: "12px",
-                                lineHeight: "24px",
-                                color: "#FF5955",
-                              }}
-                            >
-                              R$: &nbsp;&nbsp;
+                        <img
+                          src="assets/images/potevacina.png"
+                          alt=""
+                          width={50}
+                          style={{
+                            transform: "scale(1.4)",
+                            transformOrigin: "bottom center",
+                          }}
+                        />
+                        <div
+                          className={"pl-10"}
+                          style={{
+                            fontFamily: "Roboto",
+                            fontStyle: "normal",
+                            fontWeight: "600",
+                            fontSize: "14px",
+                            color: "#3B3B3B",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                          }}
+                        >
+                          <div>Vacina Quadrivalente da Gripe (Cepas 2023)</div>
+                          <div>
+                            <span>
+                              <span
+                                style={{
+                                  fontFamily: "Roboto",
+                                  fontStyle: "normal",
+                                  fontWeight: 700,
+                                  fontSize: "12px",
+                                  lineHeight: "24px",
+                                  color: "#FF5955",
+                                }}
+                              >
+                                R$: &nbsp;&nbsp;
+                              </span>
+                              <span
+                                style={{
+                                  fontFamily: "Roboto",
+                                  fontSize: 16,
+                                  color: "#212B36",
+                                }}
+                              >
+                                120,00
+                              </span>
                             </span>
-                            <span
+                            <br />
+                            <div
                               style={{
-                                fontFamily: "Roboto",
-                                fontSize: 16,
-                                color: "#212B36",
+                                display: "flex",
+                                width: "100%",
                               }}
                             >
-                              120,00
-                            </span>
-                          </span>
-                          <br />
-                          <div
-                            style={{
-                              display: "flex",
-                              width: "100%",
-                            }}
-                          >
-                            <DefaultButton
-                              style={{
-                                padding: "0.5rem 1rem",
-                                width: "200px",
-                              }}
-                            >
-                              Saiba mais
-                            </DefaultButton>
+                              <DefaultButton
+                                style={{
+                                  padding: "0.5rem 1rem",
+                                  width: "200px",
+                                }}
+                              >
+                                Saiba mais
+                              </DefaultButton>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </DefaultViewportAnimation>
-              );
-            })}
+                  </DefaultViewportAnimation>
+                );
+              }
+            )}
           </div>
         </div>
       </div>

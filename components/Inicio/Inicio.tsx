@@ -727,12 +727,11 @@ function InicioJumbotronExamesVacinacaoInfusao() {
             />
             <Exames>{item.title}</Exames>
             <LaboratoriaisBiologi>{item.description}</LaboratoriaisBiologi>
-
-            <DefaultButtonInk className="mt-12">
+            <div className="mt-8" />
+            <DefaultButtonInk>
               <motion.button
                 className="w-72 h-12"
-                whileTap={{
-                }}
+            
               >
                 <div
                   className="flex items-center justify-center flex-1 h-full py-2.5 border rounded-lg border-red-500"
