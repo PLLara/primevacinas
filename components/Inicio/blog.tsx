@@ -7,8 +7,11 @@ import { InicioProps } from "types";
 import { motion } from "framer-motion";
 import { DefaultViewportAnimation } from "../global/DefaultViewportAnimation";
 import { DefaultButtonInk } from "../global/DefaultButtonInk";
-import TinyCrossfade from "react-tiny-crossfade";
-import { InicioWrapper, Rectangle35, DefaultButton, InicioJumbotronPedirAgoraVacina } from "./Inicio";
+import {
+  InicioWrapper,
+  Rectangle35,
+  InicioJumbotronPedirAgoraVacina,
+} from "./Inicio";
 import DefaultButtonGroup from "./blog/buttongroup";
 
 function Blog(props: InicioProps): JSX.Element {
@@ -20,11 +23,12 @@ function Blog(props: InicioProps): JSX.Element {
       <InicioJumbotronVacinacaoCondominio />
 
       {InicioJumbotronNavegueCategorias()}
-      <div style={{
-        margin: "80px 0px 150px 0px"
-      }}>
-      <InicioJumbotronPedirAgoraVacina />
-
+      <div
+        style={{
+          margin: "80px 0px 150px 0px",
+        }}
+      >
+        <InicioJumbotronPedirAgoraVacina />
       </div>
 
       <Rectangle35
@@ -219,7 +223,16 @@ function InicioJumbotronNavegueCategorias() {
 function InicioJumbotronExamesVacinacaoInfusao() {
   return (
     <InicioContainerExamesWrapper>
-      <InicioContainerExames
+      <div
+        style={{
+          display: `flex`,
+          position: `relative`,
+          flexDirection: `row`,
+          width: `min(100vw, 1360px)`,
+          justifyContent: `space-around`,
+          alignItems: `flex-start`,
+          boxSizing: `border-box`,
+        }}
         className={"flex flex-col md:flex-row py-12 md:py-36 "}
       >
         {[
@@ -277,7 +290,7 @@ function InicioJumbotronExamesVacinacaoInfusao() {
             </DefaultButtonInk>
           </HomeContainerExamesTile>
         ))}
-      </InicioContainerExames>
+      </div>
     </InicioContainerExamesWrapper>
   );
 }
@@ -389,27 +402,14 @@ const InicioContainerExamesWrapper: any = styled("div")({
   paddingTop: `10vh`,
 });
 
-const InicioContainerExames: any = styled("div")({
-  display: `flex`,
-  position: `relative`,
-  isolation: `isolate`,
-  flexDirection: `row`,
-  width: `min(100vw, 1360px)`,
-  justifyContent: `space-around`,
-  alignItems: `flex-start`,
-  padding: `0px`,
-  boxSizing: `border-box`,
-  margin: `0px`,
-});
+
 
 const HomeContainerExamesTile: any = styled("div")({
   display: `flex`,
   flexDirection: `column`,
   justifyContent: `center`,
   alignItems: `center`,
-  padding: `0px`,
   boxSizing: `border-box`,
-  margin: `0px`,
 });
 
 const Exames: any = styled("div")({

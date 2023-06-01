@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { StyledEngineProvider } from "@mui/material/styles";
 import InicioComp from "components/Inicio/Inicio";
 
 const Home: NextPage = () => {

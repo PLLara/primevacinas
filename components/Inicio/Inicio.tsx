@@ -1088,7 +1088,6 @@ const InicioJumbotronVacinacaoCondominioWrapper: any = styled("div")({
 const Row: any = styled("div")({
   display: `flex`,
   flexDirection: `row`,
-  flexWrap: `wrap`,
 });
 const CRow: any = styled("div")({
   display: `flex`,
@@ -1118,7 +1117,6 @@ export const InicioWrapper: any = styled("div")({
   width: "100%",
   justifyContent: `flex-start`,
   alignItems: `center`,
-  padding: `0px`,
   boxSizing: `border-box`,
   overflow: `hidden`,
   height: "auto",
@@ -1137,16 +1135,10 @@ const InicioContainerExamesWrapper: any = styled("div")({
 });
 
 const InicioContainerExames: any = styled("div")({
-  display: `flex`,
-  position: `relative`,
-  isolation: `isolate`,
-  flexDirection: `row`,
   width: `min(100vw, 1360px)`,
   justifyContent: `space-around`,
   alignItems: `flex-start`,
-  padding: `0px`,
   boxSizing: `border-box`,
-  margin: `0px`,
 });
 
 const HomeContainerExamesTile: any = styled("div")({
@@ -1154,9 +1146,7 @@ const HomeContainerExamesTile: any = styled("div")({
   flexDirection: `column`,
   justifyContent: `center`,
   alignItems: `center`,
-  padding: `0px`,
   boxSizing: `border-box`,
-  margin: `0px`,
 });
 
 const Exames: any = styled("div")({

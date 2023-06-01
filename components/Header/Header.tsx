@@ -245,7 +245,6 @@ const HeaderLogo: any = styled("img")({
 });
 
 const Opções: any = styled("div")({
-  display: `flex`,
   flex: 1,
   isolation: `isolate`,
   flexDirection: `row`,
