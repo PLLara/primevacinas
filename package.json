@@ -15,7 +15,7 @@
     "@mui/lab": "^5.0.0-alpha.102",
     "@mui/material": "^5.10.5",
     "framer": "^2.3.0",
-    "framer-motion": "^10.10.0",
+    "framer-motion": "^10.12.17",
     "motion": "^10.15.5",
     "next": "13.4.4",
     "popmotion": "^11.0.5",
