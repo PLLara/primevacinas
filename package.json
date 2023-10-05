@@ -14,7 +14,7 @@
     "@mui/icons-material": "^5.11.9",
     "@mui/lab": "^5.0.0-alpha.102",
     "@mui/material": "^5.10.5",
-    "framer": "^2.3.0",
+    "framer": "^2.4.1",
     "framer-motion": "^10.10.0",
     "motion": "^10.15.5",
     "next": "13.4.4",
